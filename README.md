@@ -1,3 +1,6 @@
+# Úkoly
+- [Variables_cv.java](./src/Variables_cv.java)
+---
 "Hello, World!"
-<img alt="meow" src="./meow.jpg" title="cat"/>
+<br/><img alt="meow" src="./meow.jpg" title="cat" width="10%"/>
 ###### _Meow_
