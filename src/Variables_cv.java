@@ -84,7 +84,7 @@ public class Variables_cv {
          }
          */
         Chessboard chessboard = new Chessboard(8);
-        chessboard.printBoard();
+        chessboard.printBoard(true);
 
         /*
         Pokud byste chtěli vypisovat barevně, lze využít tyto řetězce
