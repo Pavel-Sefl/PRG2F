@@ -14,7 +14,7 @@ public class Variables_cv {
 //        type bigA = 'A';                      // jeden znak, píše se do ''
 //        type name = "Jmeno";                  // textový řetězec (znak/slovo/text), píše se do "";
 
-        /**
+        /*
          * CV 1
          * Uložte 2 libovolná čísla do 2 proměnných
          * Poté je:
@@ -33,7 +33,7 @@ public class Variables_cv {
         System.out.println("smthn = " + smthn);
         System.out.println("timeNow = " + timeNow);
 
-        /**
+        /*
          * CV 2
          * Napište jednoduchou kalkulačku, která bude umět +, -, *, / nad dvěma čísly z množiny R (Reálných čísel).
          * Výsledky vypište na konzoli
@@ -41,7 +41,7 @@ public class Variables_cv {
         Calulator calc = new Calulator();
         calc.startOnce();
 
-        /**
+        /*
          * CV 3
          * Uložte do proměnné pravdivostního typu, zda součet 3 libovolných malých písmen je větší než 300.
          * Výsledek vypište na konzoli
@@ -56,7 +56,7 @@ public class Variables_cv {
         isMore = a + b + c > 300;
         System.out.println(isMore);
 
-        /**
+        /*
          * CV 4
          * Zeptejte se uživatele na jeho, jméno, příjmení, PSČ a rodné číslo
          * Údaje pak uživateli vypište
@@ -77,7 +77,7 @@ public class Variables_cv {
         System.out.println("rodneCislo = " + rodneCislo);
 
 
-        /**
+        /*
          * CV 5
          * Vygenerujte šachovnici o velikosti NxN, kde N je vstup od uživatele
          * int n;
