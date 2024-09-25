@@ -20,12 +20,18 @@ public class Variables_cv {
          * Poté je:
          * Vypište, Přehoďte, Vypište,
          */
-        int smthn = 48421;
+        long smthn = 484214948L;
         long timeNow = System.nanoTime();
 
         System.out.println("smthn = " + smthn);
         System.out.println("timeNow = " + timeNow);
 
+        long tmp = smthn;
+        smthn = timeNow;
+        timeNow = tmp;
+
+        System.out.println("smthn = " + smthn);
+        System.out.println("timeNow = " + timeNow);
 
         /**
          * CV 2
@@ -35,16 +41,18 @@ public class Variables_cv {
         Calulator calc = new Calulator();
         calc.startOnce();
 
-
         /**
          * CV 3
          * Uložte do proměnné pravdivostního typu, zda součet 3 libovolných malých písmen je větší než 300.
          * Výsledek vypište na konzoli
          */
         boolean isMore;
-        int a = 123;
-        int b = 64;
-        int c = 2;
+        /*int a = (int) 'a';
+        int b = (int) 'j';
+        int c = (int) 'l';*/
+        char a = 'a';
+        char b = 'b';
+        char c = 'c';
         isMore = a+b+c > 300;
         System.out.println(isMore);
 

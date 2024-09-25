@@ -34,6 +34,7 @@ public class Calulator {
                 break;
             case '/':
                 divide(a,b);
+                break;
             default:
                 System.out.println("Invalid operation.");
         }
