@@ -21,7 +21,7 @@ public class Chessboard {
             for (int y = 0; y < size; y++) {
                 System.out.print(this.board[x][y]);
             }
-            if (useNumbering) System.out.print(" "+x);
+            if (useNumbering) System.out.print(" "+(x+1));
             System.out.println();
         }
     }
