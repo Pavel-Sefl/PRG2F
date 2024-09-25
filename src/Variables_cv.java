@@ -1,7 +1,4 @@
-import java.util.Dictionary;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Variables_cv {
     public static void main(String[] args) {
@@ -112,14 +109,32 @@ public class Variables_cv {
         */
 
         // Dalsi ukoly
-        System.out.println("Enter the donor's blood type:");
-        String donorType = in.next();
         System.out.println("Enter the recipient's blood type:");
         String recipientType = in.next();
+        System.out.println("Enter the donor's blood type:");
+        String donorType = in.next();
 
-        Map<String, String> bloodTypeCompatibility = new HashMap<>();
+        Dictionary<String, String[]> recipientCompatibleBloodTypes = new Hashtable<>();
+        recipientCompatibleBloodTypes.put("AB+", new String[] {"0-", "0+", "B-", "B+", "A-", "A+", "AB-", "AB+"});
+        recipientCompatibleBloodTypes.put("AB-", new String[] {"0-", "B-", "A-", "AB-"});
+        recipientCompatibleBloodTypes.put("A+", new String[] {"0-", "0+", "A-", "A+"});
+        recipientCompatibleBloodTypes.put("A-", new String[] {"0-", "A-",});
+        recipientCompatibleBloodTypes.put("B+", new String[] {"0-", "0+", "B-", "B+"});
+        recipientCompatibleBloodTypes.put("B-", new String[] {"0-", "B-"});
+        recipientCompatibleBloodTypes.put("0+", new String[] {"0-", "0+"});
+        recipientCompatibleBloodTypes.put("0-", new String[] {"0-"});
 
-
+        if (recipientCompatibleBloodTypes.get(recipientType) != null) {
+            boolean found = false;
+            for (int i = 0; i < recipientCompatibleBloodTypes.get(recipientType).length; i++) {
+                if (Objects.equals(recipientCompatibleBloodTypes.get(recipientType)[i], donorType)) {
+                    System.out.println("✅ Recipient's blood type ("+recipientType+") is compatible with donor's blood type ("+donorType+")");
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) System.out.println("❌ Recipient's blood type ("+recipientType+") is not compatible with donor's blood type ("+donorType+")");
+        } else System.out.println("❕ Cannot find recipient's blood type: " + recipientType);
 
     }
 }
