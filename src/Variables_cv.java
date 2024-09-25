@@ -1,3 +1,6 @@
+import java.util.Dictionary;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Variables_cv {
@@ -53,7 +56,7 @@ public class Variables_cv {
         char a = 'a';
         char b = 'b';
         char c = 'c';
-        isMore = a+b+c > 300;
+        isMore = a + b + c > 300;
         System.out.println(isMore);
 
         /**
@@ -107,5 +110,16 @@ public class Variables_cv {
         final String CYAN = "\u001B[36m";
         final String WHITE = "\u001B[37m";
         */
+
+        // Dalsi ukoly
+        System.out.println("Enter the donor's blood type:");
+        String donorType = in.next();
+        System.out.println("Enter the recipient's blood type:");
+        String recipientType = in.next();
+
+        Map<String, String> bloodTypeCompatibility = new HashMap<>();
+
+
+
     }
 }
