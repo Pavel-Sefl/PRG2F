@@ -19,8 +19,8 @@ public class TestPractice1 {
 
         // 2A
         System.out.println("## Karetní hra ##");
-        int numA = rng.nextInt(12);
-        int numB = rng.nextInt(12);
+        int numA = rng.nextInt(12)+1;
+        int numB = rng.nextInt(12)+1;
         int numSum = numA+numB;
 
         System.out.println("Vaše čísla: "+numA+", "+numB);
@@ -56,9 +56,9 @@ public class TestPractice1 {
         else System.out.println("Nemůžete darovat krev.");
 
         // 2B
-        int rollA = rng.nextInt(1, 6);
-        int rollB = rng.nextInt(1, 6);
-        int rollC = rng.nextInt(1, 6);
+        int rollA = rng.nextInt(6)+1;
+        int rollB = rng.nextInt(6)+1;
+        int rollC = rng.nextInt(6)+1;
 
         System.out.println("Vaše hody: "+rollA+", "+rollB+", "+rollC);
         if (rollA == rollB || rollA == rollC || rollB == rollC) System.out.println("Vyhráli jste.");
