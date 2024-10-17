@@ -1,9 +1,11 @@
 import java.util.Objects;
+import java.util.Random;
 import java.util.Scanner;
 
 public class WhileCV {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        Random rng = new Random(System.nanoTime());
 
         // Úkol 1
         System.out.println("Úkol 1: Součet čísel");
@@ -70,5 +72,17 @@ public class WhileCV {
         } while (prevInput != 0);
 
         System.out.println("Největší číslo: " + prevHighest);
+
+        // Hra
+        System.out.println("Hra: Hádej číslo od 1 do 100");
+        int correctNum = rng.nextInt(1, 101);
+        int guess;
+        do {
+            guess = in.nextInt();
+            if (guess > correctNum) System.out.println("Zkus menší");
+            else if (guess < correctNum) System.out.println("Zkus větší.");
+        } while (guess != correctNum);
+
+        System.out.println("Správně!");
     }
 }
