@@ -2,22 +2,19 @@ import java.util.Scanner;
 
 public class StringBonus {
     static boolean isPasswordSafe(String password) {
-        if (password.length() < 12) return false;
-        if (
-            Character.isWhitespace(password.charAt(0)) ||
-            Character.isWhitespace(password.charAt(password.length()-1))
-        ) return false;
-        String lowercase = password.toLowerCase();
-        if (!lowercase.matches(".*red.*") || lowercase.matches(".*vacek.*")) return false;
-        if (password.charAt(password.length()-1) != '*') return false;
-        return true;
+        return password.length() >= 12 &&
+                !Character.isWhitespace(password.charAt(0)) &&
+                !Character.isWhitespace(password.charAt(password.length()-1)) &&
+                password.matches(".*[Rr][Ee][Dd].*") &&
+                !password.matches(".*[Vv][Aa][Cc][Ee][Kk].*") &&
+                password.charAt(password.length()-1) == '*';
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
         // Validace hesla
         System.out.print("Napište nové heslo: ");
-        if (isPasswordSafe(in.next())) System.out.println("Vaše heslo je bezpečné.");
+        if (isPasswordSafe(in.nextLine())) System.out.println("Vaše heslo je bezpečné.");
         else System.out.println("Vaše heslo není bezpečné");
 
         // Převod soustavy
