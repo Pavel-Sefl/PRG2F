@@ -24,7 +24,7 @@ public class Methods1 {
 
         if (!noMatch.isEmpty()) {
             System.out.println("Heslo nevyhovuje následujícím požadavkům:");
-            for (int i = 0; i < noMatch.size(); i++) System.out.println(" - "+conditions[noMatch.get(i)]);
+            for (Integer match : noMatch) System.out.println(" - " + conditions[match]);
         }
 
         return noMatch.isEmpty();
@@ -35,7 +35,7 @@ public class Methods1 {
 
         System.out.println("\u001B[37m(Hint: nytimes.com/svc/wordle/v2/YYYY-MM-DD.json)\u001B[0m");
         System.out.println("Vítejte! Vytvořte si prosím nové heslo, které splňuje následující podmínky:");
-        for (int i = 0; i < conditions.length; i++) System.out.println(" - "+conditions[i]);
+        for (String condition : conditions) System.out.println(" - " + condition);
         System.out.print("Vaše heslo: ");
 
         while (!validatePassword(in.nextLine())) System.out.print("Zkuste to prosím znovu.\r\nVaše heslo: ");
