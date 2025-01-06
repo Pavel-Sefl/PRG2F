@@ -10,7 +10,7 @@ public class Methods1 {
     };
 
     static List<Integer> getPasswordViolations(String password) {
-        List<Integer> noMatch = new ArrayList<Integer>();
+        List<Integer> noMatch = new ArrayList<>();
 
         if (password.length() < 8) noMatch.add(0);
         if (password.matches(".*heslo.*")) noMatch.add(1);
@@ -24,7 +24,7 @@ public class Methods1 {
 
         if (!noMatch.isEmpty()) {
             System.out.println("Heslo nevyhovuje následujícím požadavkům:");
-            for (Integer match : noMatch) System.out.println(" - " + conditions[match]);
+            for (Integer i : noMatch) System.out.println(" - " + conditions[i]);
         }
 
         return noMatch.isEmpty();
