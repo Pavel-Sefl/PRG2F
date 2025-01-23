@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Methods2 {
+    private static Scanner in = new Scanner(System.in);
     private static final String[] kaomoji = {
             "☆*: .｡. o(≧▽≦)o .｡.:*☆",
             "°*:.☆(￣▽￣)/$:*.°★* 。",
@@ -50,13 +51,18 @@ public class Methods2 {
                 + kaomoji[(int)(part3 % kaomoji.length)];
     }
 
+    public static String reqestString(String suffix)
+    {
+        System.out.print("Vaše "+suffix+": ");
+        return in.nextLine();
+    }
+
     public static boolean verifyUsername(String username)
     {
         return username.length() >= 5;
     }
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
         boolean isUsernameValid;
         String username;
         int validationPasses = 0;
@@ -65,10 +71,8 @@ public class Methods2 {
 
             String forename, surname;
 
-            System.out.print("Vaše jméno: ");
-            forename = in.nextLine();
-            System.out.print("Vaše příjmení: ");
-            surname = in.nextLine();
+            forename = reqestString("jméno");
+            surname = reqestString("příjmení");
 
             username = getUsernameFromUserInput(forename, surname);
             System.out.println("Vaše vygenerovaná přezdívka: "+username);
