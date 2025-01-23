@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Methods2 {
-    private static Scanner in = new Scanner(System.in);
+    private static final Scanner in = new Scanner(System.in);
     private static final String[] kaomoji = {
             "☆*: .｡. o(≧▽≦)o .｡.:*☆",
             "°*:.☆(￣▽￣)/$:*.°★* 。",
@@ -33,7 +33,7 @@ public class Methods2 {
 
     public static String getUsernameFromUserInput(String forename, String surname)
     {
-        if (forename.isEmpty() || surname.isEmpty()) return "";
+        if (forename.replaceAll("\\s", "").isEmpty() || surname.replaceAll("\\s", "").isEmpty()) return "";
 
         forename = forename.strip();
         surname = surname.strip();
