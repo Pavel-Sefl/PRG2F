@@ -37,7 +37,7 @@ public class Methods2 {
 
         forename = forename.strip();
         surname = surname.strip();
-
+        
         String part1 = forename.length() > 2 ? forename.toLowerCase().substring(0 ,3) : forename.toLowerCase();
         String part2 = surname.length() > 2 ? surname.toLowerCase().substring(0, 3) : surname.toLowerCase();
 
