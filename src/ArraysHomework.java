@@ -63,8 +63,8 @@ public class ArraysHomework {
         do {
             swap = false;
             for (int i = 0; i < inventory.length-1; i++) {
-                String itemA = inventory[i];
-                String itemB = inventory[i + 1];
+                String itemA = inventory[i].toLowerCase();
+                String itemB = inventory[i + 1].toLowerCase();
                 int rating = 0;
 
                 for (int j = 0; j < Math.min(itemA.length(), itemB.length()); j++) {
@@ -92,8 +92,8 @@ public class ArraysHomework {
 
                 if (rating > 0) swapItemsAt(i, i + 1);
                 else if (rating == 0) {
-                    String itemA = inventory[i];
-                    String itemB = inventory[i + 1];
+                    String itemA = inventory[i].toLowerCase();
+                    String itemB = inventory[i + 1].toLowerCase();
                     int tieRating = 0;
 
                     for (int j = 0; j < Math.min(itemA.length(), itemB.length()); j++) {
