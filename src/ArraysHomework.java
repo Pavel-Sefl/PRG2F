@@ -86,12 +86,13 @@ public class ArraysHomework {
         boolean swap;
 
         do {
-            swap = true;
+            swap = false;
             for (int i = 0; i < inventory.length-1; i++) {
                 int rating = rarities[i] - rarities[i + 1];
-
-                if (rating > 0) swapItemsAt(i, i + 1);
-                else if (rating == 0) {
+                if (rating > 0) {
+                    swap = true;
+                    swapItemsAt(i, i + 1);
+                } else if (rating == 0) {
                     String itemA = inventory[i].toLowerCase();
                     String itemB = inventory[i + 1].toLowerCase();
                     int tieRating = 0;
@@ -103,8 +104,11 @@ public class ArraysHomework {
                         if (tieRating != 0) break;
                     }
 
-                    if (tieRating > 0 || (tieRating == 0 && itemA.length() > itemB.length())) swapItemsAt(i, i+1);
-                } else swap = false;
+                    if (tieRating > 0 || (tieRating == 0 && itemA.length() > itemB.length())) {
+                        swap = true;
+                        swapItemsAt(i, i + 1);
+                    }
+                }
             }
         } while (swap);
     }
