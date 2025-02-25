@@ -50,10 +50,10 @@ public class ArraysHomework {
 
     private static void addItemOfRarity(String newItem, Character newRarity)
     {
-        inventory = Arrays.copyOf(inventory, inventory.length);
+        inventory = Arrays.copyOf(inventory, inventory.length + 1);
         inventory[inventory.length-1] = newItem;
 
-        rarities = Arrays.copyOf(rarities, rarities.length);
+        rarities = Arrays.copyOf(rarities, rarities.length + 1);
         rarities[rarities.length-1] = newRarity;
     }
 
