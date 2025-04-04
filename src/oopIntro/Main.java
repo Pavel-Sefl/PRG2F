@@ -7,5 +7,10 @@ public class Main {
         Book programmingInOstraJava = new Book("Programming in OstraJava", lojza);
 
         programmingInOstraJava.printBookInfo();
+
+        Circle c = new Circle(12);
+
+        c.printArea();
+        c.printCircumference();
     }
 }

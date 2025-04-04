@@ -11,6 +11,6 @@ public class Book {
 
     public void printBookInfo() {
         System.out.printf(">> -- >> %s << -- <<\n\r", this.title);
-        System.out.printf(">> Author: %s %s", this.author.forename, this.author.surname);
+        System.out.printf(">> Author: %s %s\n\r", this.author.forename, this.author.surname);
     }
 }
