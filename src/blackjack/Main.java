@@ -23,6 +23,7 @@ public class Main {
             player.setBet(input.getBet());
 
             playerBalance -= player.getBet();
+            System.out.printf("Balance after bet: %d\n\r", playerBalance);
 
             // Initial deal
             player.addCard(deck.dealCard());
@@ -72,11 +73,18 @@ public class Main {
 
                 while (dealer.getTotalValue() < 17) {
                     Card card = deck.dealCard();
-                    System.out.println("Dealer drew: ");
+
+                    System.out.print("Dealer drew: ");
                     card.printCard();
                     System.out.println();
+
                     dealer.addCard(card);
+
+                    if (dealer.getTotalValue() >= 17) {
+                        dealer.printCards();
+                    }
                 }
+
 
                 // Conclusion
                 int dealerTotal = dealer.getTotalValue();
