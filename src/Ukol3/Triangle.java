@@ -6,7 +6,6 @@ public class Triangle extends Shape {
     private TriangleAlignment alignment = TriangleAlignment.LEFT;
 
     /* Get/Setters */
-
     public int getHeight() { return height; }
     public void setHeight(int height) { this.height = Math.abs(height); }
 
